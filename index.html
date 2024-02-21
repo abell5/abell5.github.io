@@ -4,24 +4,90 @@
 <style>
 
 body {
-background-color: white;
-font-family: Tahoma, sans-serif;
-}
-  
-h1 {
-color: black;
+    background-color: #f7f1e3;
+    font-family: Arial, sans-serif;
+
+    line-height: 1.3;
+    text-align: justify;
+
+    font-size: 12px;
 }
 
 .container {
     padding:20px;
-    max-width: 800px;
-}
+    padding-left: 60px;
+    max-width: 600px;
+
+    color: #2f3640;
+
+
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    }
 
 .email {
     font-family: 'Courier New', monospace;
 }
 
+a:link{
+  color:#227093;
+}
+
+a:visited{
+  color:#227093;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
 </style>
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$( document ).ready(function() {
+
+    $( ".collapsible" ).on( "click", function() {
+        $( ".content" ).toggle()
+    });
+
+});
+</script>
+
+
 </head>
 <body>
 
@@ -30,8 +96,6 @@ color: black;
 <h1>Andrew Loren Bell</h1>
 
 <div class="email">{alb9742}@nyu.edu, {me,andrew}@andrewbell.io</div>
-
-<h2>Bio</h2>
 
 <p>Andrew Bell is a Computer Science Ph.D. Candidate being co-advised by Prof. Julia Stoyanovich and Dr. Oded Nov.
     Andrew is a recipient of the National Science Foundation Graduate Research Fellowship (NSF GRFP).
@@ -43,11 +107,56 @@ color: black;
     He graduated from the Calhoun Honors College at Clemson University with a Bachelor’s degree in Mathematics.
 </p>
 
-<h2>Publications</h2> 
-
-<p>[<a href="https://dl.acm.org/doi/pdf/10.1145/3617694.3623251">link</a>] Fonseca, João, <b>Andrew Bell</b>, Carlo Abrate, Francesco Bonchi, and Julia Stoyanovich. "Setting the right expectations: Algorithmic recourse over time." In <i>Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization</i>, pp. 1-11. 2023.
+<button type="button" class="collapsible">Publications +</button> 
+<div class="content">
+<p>
+    [link] <b>Bell, Andrew</b> and Julia Stoyanovich. "Making transparency influencers: a case atudy of an aducational approach to improve responsible AI practices in news and media." In <i>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems</i> (forthcoming).
 </p>
 
+<p>
+    [<a href="https://arxiv.org/abs/2401.16088">link</a>] <b>Bell, Andrew*</b>, João Fonseca*, Carlo Abrate, Francesco Bonchi, and Julia Stoyanovich. "Fairness in algorithmic recourse through the lens of substantive equality of opportunity." <i>Under review.</i> 2024.
+</p>
+
+<p>
+    [<a href="https://dl.acm.org/doi/pdf/10.1145/3617694.3623251">link</a>] <b>Best AI Paper Award.</b> Fonseca*, João, <b>Andrew Bell*</b>, Carlo Abrate, Francesco Bonchi, and Julia Stoyanovich. "Setting the right expectations: algorithmic recourse over time." In <i>Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization</i>, pp. 1-11. 2023.
+</p>
+
+<p>
+    [<a href="https://dl.acm.org/doi/pdf/10.1145/3593013.3594007">link</a>] <b>Bell, Andrew</b>, Lucius Bynum, Nazarii Drushchak, Tetiana Zakharchenko, Lucas Rosenblatt, and Julia Stoyanovich. "The possibility of fairness: revisiting the impossibility theorem in practice." In <i>Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency</i>, pp. 400-422. 2023.
+</p>
+
+<p>
+    [<a href="https://www.cambridge.org/core/journals/data-and-policy/article/think-about-the-stakeholders-first-toward-an-algorithmic-transparency-playbook-for-regulatory-compliance/10D7F194DB250DDF3A30471B5CEB9326?utm_campaign=shareaholic&utm_medium=copy_link&utm_source=bookmark">link</a>] <b>Bell, Andrew</b>, Oded Nov, and Julia Stoyanovich. "Think about the stakeholders first! Toward an algorithmic transparency playbook for regulatory compliance." <i>Data & Policy 5</i> (2023): e12.
+</p>
+
+<p>
+    [<a href="https://dl.acm.org/doi/pdf/10.1145/3544549.3574169">link</a>] <b>Bell, Andrew</b>, Oded Nov, and Julia Stoyanovich. "The algorithmic transparency playbook: a stakeholder-first approach to creating transparency for your organization’s algorithms." In <i>Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems</i>, pp. 1-4. 2023.
+</p>
+
+<p>
+    [<a href="https://dl.acm.org/doi/pdf/10.1145/3531146.3533090">link</a>] <b>Bell, Andrew</b>, Ian Solano-Kamaiko, Oded Nov, and Julia Stoyanovich. "It’s just not that simple: an empirical study of the accuracy-explainability trade-off in machine learning for public policy." In <i>Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency</i>, pp. 248-266. 2022.
+</p>
+
+<p>
+    [<a href="https://doi.org/10.1080/19345747.2019.1634169">link</a>] Bloom, Howard, <b>Andrew Bell</b>, and Kayla Reiman. "Using data from randomized trials to assess the likely generalizability of educational treatment-effect estimates from regression discontinuity designs." <i>Journal of Research on Educational Effectiveness 13</i>, no. 3 (2020): 488-517.
+</p>
+
+<p>
+    [<a href="https://doi.org/10.1525/gp.2020.12908">link</a>] Zejnilović, Leid, Susana Lavado, Íñigo Martínez de Rituerto de Troya, Samantha Sim, and <b>Andrew Bell</b>. "Algorithmic long-term unemployment risk assessment in use: counselors’ perceptions and use practices." <i>Global Perspectives 1</i>, no. 1 (2020): 12908.
+</p>
+
+<p>
+    [<a href="https://doi.org/10.5465/AMBPP.2021.264">link</a>] Zejnilovic, Leid, Susana Lavado, Carlos Soares, Íñigo Martínez De Rituerto De Troya, <b>Andrew Bell</b>, and Rayid Ghani. "Machine learning informed decision-making with interpreted model’s outputs: A field intervention." In <i>Academy of Management Proceedings</i>, vol. 2021, no. 1, p. 15424. Briarcliff Manor, NY 10510: Academy of Management, 2021.
+</p>
+
+<p>
+    [<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8904616">link</a>] <b>Bell, Andrew</b>, Alexander Rich, Melisande Teng, Tin Orešković, Nuno B. Bras, Lénia Mestrinho, Srdan Golubovic, Ivan Pristas, and Leid Zejnilovic. "Proactive advising: a machine learning driven approach to vaccine hesitancy." In <i>Proceedings of 2019 IEEE International Conference on Healthcare Informatics (ICHI)</i>, pp. 1-6. IEEE, 2019.
+</p>
+
+<p>
+    * Equal contribution by authors
+</p>
+</div>
 </div>
 
 </body>
