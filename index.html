@@ -10,7 +10,11 @@ body {
     line-height: 1.3;
     text-align: justify;
 
-    font-size: 12px;
+    font-size: 13px;
+}
+
+p {
+    font-family: Georgia, serif
 }
 
 .container {
@@ -19,7 +23,6 @@ body {
     max-width: 600px;
 
     color: #2f3640;
-
 
     opacity: 0;
     animation-name: fadeIn;
@@ -41,21 +44,20 @@ a:visited{
 }
 
 .collapsible {
-  background-color: #eee;
-  color: #444;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
+  /*padding: 5px;*/
   border: none;
+  margin-left:-5px;
   text-align: left;
   outline: none;
   font-size: 18px;
   font-weight: bold;
+  background-color: inherit;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
+.collapsible:hover {
+  background-color: rgb(220, 118, 118);
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -81,7 +83,16 @@ a:visited{
 $( document ).ready(function() {
 
     $( ".collapsible" ).on( "click", function() {
-        $( ".content" ).toggle()
+        col = $(this);
+        $( ".content" ).toggle("slow", function() {
+            if ( $(this).is(":hidden") ) {
+                console.log("here2")
+                col.text('Publications +');
+            } else {
+                console.log("here")
+                col.text('Publications -');
+            };
+        });
     });
 
 });
